@@ -32,7 +32,7 @@ window.onload = function(){
    
     let addBtn = <HTMLLinkElement> 
         document.querySelector("#create-item > button");
-    addBtn.click = processNewItem;
+    addBtn.onclick = processNewItem;
 
     let readItemBtn = <HTMLElement>
         document.querySelector("#read-item > button");
@@ -51,10 +51,27 @@ function readItem(){
 }
 
 function processNewItem(){
+    
     let item:ToDoItem = getItemFromForm();
     saveItem(item);
     notifyUser();
     clearForm();
+    displayToDo(item);
+}
+
+function displayToDo(item:ToDoItem){
+    let todoList = 
+        document.getElementById("todo-list");
+   let itemPar = document.createElement("p");
+        itemPar.innerText = item.title;
+        itemPar.onclick = toggleItemComplete;
+
+    todoList.appendChild(itemPar);
+}
+
+function toggleItemComplete(){
+    let currItem:HTMLElement = this;
+    currItem.classList.toggle("completed");
 }
 
 function clearForm(){
