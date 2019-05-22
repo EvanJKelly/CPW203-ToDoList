@@ -10,11 +10,17 @@
     <link rel="stylesheet" href="node_modules/js-datepicker/dist/datepicker.min.css">
     <script src="node_modules/js-datepicker/dist/datepicker.min.js"></script>
     <script src="scripts/main.js"></script>
+    <link rel="stylesheet" href="css/animation.css">
+    
     
 </head>
-<body>
+<body id="body" >
+    
+    <div id="frontpage">
+        
+      
     <header>
-        <h1>Create your ToDo List</h1>
+        <h1 class="text animated tada infinite">Create your ToDo List</h1>
     </header>
     <div id="create-item">
         <label>Title: </label>
@@ -36,11 +42,11 @@
         <span></span>
         <br>    
 
-        <label for="is-complete">Is Complete?</label>
+        <label for="is-complete" >Is Complete?</label>
         <input type="checkbox" id="is-complete">
         <br>
 
-        <label>Choose an urgency:</label>
+        <label >Choose an urgency:</label>
         <select id="urgency">
             <option value="L">Low</option>
             <option value="M">Medium</option>
@@ -48,7 +54,7 @@
         </select>
         <br>
 
-        <button type="button">Add ToDo Item</button>
+        <button type="button" class="text animated pulse infinite">Add ToDo Item</button>
 
     </div>
     <br>
@@ -60,6 +66,8 @@
 
     <script>
         const picker = datepicker(".due-date");
+       
     </script>
+    </div>
 </body>
 </html>
