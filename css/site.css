@@ -11,3 +11,32 @@ p.completed{
     text-decoration: line-through;
     
 }
+
+h1{
+    color: red;
+}
+#frontpage{
+
+position: absolute;
+text-align: center;
+margin-top: 8%;
+font-size:  30px;
+border: 1px solid blue;
+width: 60%;
+margin-left: 20%;
+margin-bottom: 100%;
+background-color: lightblue;
+
+
+}
+
+.bg{
+    background-color: red;
+    
+    
+}
+body{
+    
+    background: green; 
+}
+
